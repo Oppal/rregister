@@ -1,0 +1,79 @@
+<div class="add">
+<div class="container-narrow">
+
+  <div class="panel panel-primary">
+      <div class="panel-heading">Add a new User</div>
+  <div class="panel-body">
+
+<form class="form-horizontal"  #addRegisterForm="ngForm" (submit)="addRegister()">
+<div class="col-md-4">
+
+<image-upload
+
+> </image-upload>
+      <img src="{{file_src}}" height="180px" width="200px">
+
+
+</div>
+
+<div class="col-md-8">
+<div class ="form-group">
+    
+    <label for = "fullname" class="col-md-4 control-label">Fullname</label>
+      <div class ="col-md-8">
+    <input type ="text" class="form-control" name="fullname" required maxlength="30" [(ngModel)]="model.fullname" #fullname="ngModel">
+    </div>
+
+    <div *ngIf="fullname.errors && (fullname.dirty || fullname.touched)" class="alert alert-danger">
+    <div [hidden] = "!fullname.errors.required">
+      <span class ="gylphicon glyphicon-exclamation-sign"></span>&nbsp; fullname is required
+   
+    </div>
+    
+    </div> 
+
+<div>
+
+
+</div>
+
+
+     
+  </div>
+<div class ="form-group">
+    
+    <label for = "age" class="col-md-4 control-label">Age</label>
+      <div class ="col-md-8">
+    <input type= "number" class="form-control" name="age" required maxlength="100" [(ngModel)]="model.age" #age="ngModel">
+    </div>
+
+<div *ngIf="age.errors && (age.dirty || age.touched)" class="alert alert-danger">
+    <div [hidden] = "!age.errors.required">
+      <span class ="gylphicon glyphicon-exclamation-sign"></span>&nbsp; age is required
+   
+    </div>
+    
+    </div>
+     
+  </div>
+<div class ="form-group">
+<div class="col-sm-offset-4 col-sm-8">
+<button type="submit" class="btn btn-success" id="btn-save"[disabled]="!addRegisterForm.form.valid" >Save</button>
+<a class="btn btn-info"(click)="goBack()" >cancel</a>
+
+</div>
+
+
+</div>
+
+
+</div>
+</form>
+
+
+
+  </div>
+
+  </div>
+
+</div>

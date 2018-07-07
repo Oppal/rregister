@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.home{
+
+    margin-top: 100px;
+    color: black;
+}
+
+.container-narrow{
+    margin: 0 auto;
+    max-width: 700px;
+}
+.panel-heading{
+height: 55px;
+background-color: lightcoral;
+margin-top: 50px;
+}
+
+.panel-input{
+margin-top:50px
+}
+.btn-info{
+
+    margin-left: 30px;
+}
+
